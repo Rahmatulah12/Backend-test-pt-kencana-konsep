@@ -69,6 +69,9 @@ $app->configure('app');
 // auth
 $app->configure('auth');
 
+// CORS
+$app->configure('cors');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -83,8 +86,7 @@ $app->configure('auth');
 
 $app->middleware([
 //     App\Http\Middleware\ExampleMiddleware::class
-    // Fruitcake\Cors\HandleCors::class,
-    App\Http\Middleware\CorsMiddleware::class,
+    Fruitcake\Cors\HandleCors::class,
 ]);
 
 $app->routeMiddleware([
@@ -110,6 +112,7 @@ $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Laravel\Passport\PassportServiceProvider::class);
 $app->register(Dusterio\LumenPassport\PassportServiceProvider::class);
 Dusterio\LumenPassport\LumenPassport::routes($app->router, ['prefix' => 'api/v1/oauth'] );
+$app->register(Fruitcake\Cors\CorsServiceProvider::class);
 
 
 /*
