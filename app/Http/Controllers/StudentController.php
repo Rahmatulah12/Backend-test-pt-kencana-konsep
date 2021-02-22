@@ -95,7 +95,7 @@ class StudentController extends BaseController
       // validation with Validator
       $validator = Validator::make($data, [
             "name" => 'required|max:50',
-            'email' => 'required|email|unique:students|max:35',
+            'email' => 'required|email|max:35',
             'phone' => 'required|min:10|max:12',
             'address' => 'required'
       ]);
