@@ -6,6 +6,7 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use Validator;
+use Illuminate\Support\Facades\DB;
 
 class StudentController extends BaseController
 {
@@ -132,8 +133,9 @@ class StudentController extends BaseController
 
     public function delete($id)
     {
+      $studentHobby = DB::table('student_hobies')->where('student_id', $id)->delete();
       $student = $this->student->where('id',$id)->delete();
-      if(!$student){
+      if(!$studentHobby && !$student){
             return response()->json([
                   'error' => true,
                   'message' => "Something went wrong.",

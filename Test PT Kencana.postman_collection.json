@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "d4a57ceb-badc-4c8b-ac7c-636f69fdf961",
+		"name": "Test PT Kencana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"rahmat12\",\n    \"email\" : \"rahmat@test.com\",\n    \"password\" : \"admin123\",\n    \"password_confirmation\" : \"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"rahmat12\",\n    \"password\" : \"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWY2ZDU3YzA4MTIyOTY2YzI5N2NmZmMyMmJmNzdmOGFmZWE4OWQ2NjdiOGJhN2U4MjY4MGJlMGUzNTBmOWNiNmY2ZTQ5MmY3YzA1Y2YyNzgiLCJpYXQiOiIxNjEzODg2MzM1LjgzMzI1NyIsIm5iZiI6IjE2MTM4ODYzMzUuODMzMjc3IiwiZXhwIjoiMTY0NTQyMjMzNS43Mjg0MjciLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.i4y9UPZNQezfZB-QjTlqkY_SVvdghOHffToKk7lWTNWlty2aJPEbuHaENFN7lHyDZ3qcbmACKH4KY7RcMQlUsmLWZ1l0A8sM0YnVSyqKTiZWdgxzDEl_Z-W1ff-FpxdlUkh5c98a7yBL3GJkRE8MycBxp_9RDwan_0yolyWeqEm8UIUn7F8BYtDrSbEyFCtXMBQEZR0od2IgMM6lGs482rYfXUZDkbVyHRyv7TNvInGxtvG2rF0-jUAsU_qSFj1m3W-mear9TGcICd8OmsX96GnDOXVdXdzj2EM8r1oLZJ5hIPJ47g4xoYsiLACSQ1nY98dBgV_81OfLaK26iklA0ROTA4Nn8PZ4iLDmwJBB4xTID-esptPCyyD0VwtsImDK3OFeZ7kY-RsqYCon_QVURtD8yIlZ3f43R9sWZlfDCR6ym_A615fDXrRqAcP73T6eReHHioFadaiIGEXzOEi-_fHvmSswl4HjgUpbWulh4f42JPmmzp3wUf67RFRJAc6533iAkgqq5dvtkV1T_xt856GmMRyBQQBpNqp82XkhT58AJJgChtHuoHDEkPiEJcevKnf66TBYoeIlf13fpuTn8HUCnH_ffWVLUZh7CQniuEzapWmx1jJRnggmIkOrWhgrZrNhh_fMdnCOlpTj8j2LsAQquaJMUQVKW-V6Cq9UyIg",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Get All Data",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWY2ZDU3YzA4MTIyOTY2YzI5N2NmZmMyMmJmNzdmOGFmZWE4OWQ2NjdiOGJhN2U4MjY4MGJlMGUzNTBmOWNiNmY2ZTQ5MmY3YzA1Y2YyNzgiLCJpYXQiOiIxNjEzODg2MzM1LjgzMzI1NyIsIm5iZiI6IjE2MTM4ODYzMzUuODMzMjc3IiwiZXhwIjoiMTY0NTQyMjMzNS43Mjg0MjciLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.i4y9UPZNQezfZB-QjTlqkY_SVvdghOHffToKk7lWTNWlty2aJPEbuHaENFN7lHyDZ3qcbmACKH4KY7RcMQlUsmLWZ1l0A8sM0YnVSyqKTiZWdgxzDEl_Z-W1ff-FpxdlUkh5c98a7yBL3GJkRE8MycBxp_9RDwan_0yolyWeqEm8UIUn7F8BYtDrSbEyFCtXMBQEZR0od2IgMM6lGs482rYfXUZDkbVyHRyv7TNvInGxtvG2rF0-jUAsU_qSFj1m3W-mear9TGcICd8OmsX96GnDOXVdXdzj2EM8r1oLZJ5hIPJ47g4xoYsiLACSQ1nY98dBgV_81OfLaK26iklA0ROTA4Nn8PZ4iLDmwJBB4xTID-esptPCyyD0VwtsImDK3OFeZ7kY-RsqYCon_QVURtD8yIlZ3f43R9sWZlfDCR6ym_A615fDXrRqAcP73T6eReHHioFadaiIGEXzOEi-_fHvmSswl4HjgUpbWulh4f42JPmmzp3wUf67RFRJAc6533iAkgqq5dvtkV1T_xt856GmMRyBQQBpNqp82XkhT58AJJgChtHuoHDEkPiEJcevKnf66TBYoeIlf13fpuTn8HUCnH_ffWVLUZh7CQniuEzapWmx1jJRnggmIkOrWhgrZrNhh_fMdnCOlpTj8j2LsAQquaJMUQVKW-V6Cq9UyIg",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student"
+							]
+						},
+						"description": "Get All Data Students"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Student",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGEzMzRhNmEzZTA1NjQzNTAxOGJhYjNlOTUxYWYyOTUyZDQ0YzU5NzYxYTk4ZmZiYzkzMTFhYjMzZTQ1MGEwNjFlYzNmNjIwMjYwODgyNmYiLCJpYXQiOiIxNjE0MTE0MTcwLjM5NDYxNSIsIm5iZiI6IjE2MTQxMTQxNzAuMzk0NjIzIiwiZXhwIjoiMTY0NTY1MDE3MC4yNzk0NzUiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.n5NPDW5OT0i7XrnNyk0p-PwRWWBd-WKRetg_Brn8oX5w0TabSHMTB_uzf6TnEv1wCP3wGaoWLrk3fjUHJwlSA3VEPyUIJ1x1qvp_oHKssX2WS2hlNEX4Kfns9rjz0ffGdEMtAvXrV2Q6NJhbQFtkScTvtdtkpB4mfhzi62PFwiRPVNF125rs-reoZrFTKGdug3EGjZ0uq_cohD5CFRB0dNhvpAqnI7c9SjgJUGM2MmVra0Y0QRk6T8Tl7WhYvTQaMe-hqw-b7480GLJHFHhiJ8w-iZFTfdBc4Rinna3jny8PVUv3bfGsgd0IxwdxMXLcLv699VYxfIZAv_MaTRoUsrvfKDxu-dtULQRWoFv5URE6b86JRp3KWklyf8i3tWC17VM2g0tbbRipCK0lKIIy4bEFXVXSVReOw3-6YOijGDSV_GpQJf7Yx0psHg_riFG-K1phWjTYXA2RM06su4Ps3XU3J-5ETNA8NGJonvIlo1UarJGG5jX2tflH2V6oSyjdvSH7nEdgYDm8TccBUeszUmnLOw4j9yyHT16anWeuwckYx34XE9nPnsTjJtD1H3IB_l0uhXkH0l_85VsqLj1r0kOBBSy_ZJt9kvMgbxRDSn00ekqU5tK2eSdMuTIUUo6ISUPioJIakW6jpghQjP5IeKcSnkRCISRQnzDgK2Qd-xA",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Rahmatulah Sidik\",\n    \"email\" : \"rahmat123@gmail.com\",\n    \"phone\" : \"081245671234\",\n    \"address\" : \"Jl.Ciliwung\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/student/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWY2NjBhOTE5NjY3YjkxNGM4OGY1OTY0ODEwNTM1MjMzYjVmODI0NzJlYTFlMjMwOTZmNDcxZDFmZmMzZTk1ZWViZmE0MGNiMTY4NDIwNmIiLCJpYXQiOiIxNjEzODQzODIwLjk5MDM4MCIsIm5iZiI6IjE2MTM4NDM4MjAuOTkwNDAxIiwiZXhwIjoiMTY0NTM3OTgyMC45NDI3ODgiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0oXYj_tJ-xg-7YO0Hp84GbGqnJD3bg13Oo6H-smzO9EX5wgGQ2qJ9OGOGAV1pW8HYGuBq1os2ouhhri1upzQM-E4uPCk63q-zh9xgsQO2eHB9V4NIc9UvDRcV4kVnxCQcjbURZ7R4A0qY2M3Axh4zL8uHcSL1_bnh6ElQVUuvTDIwjjNhUNHw-_005etsEOEcU_u_6xqdWNfxvOwBX91rDDEiwtGi8kqhiRqjV_h6CU_Je3IHm0atr29h1wsxslUnVyKaI9cij1VuMiyV5oOyPLAnL5u7egiHqdvxF4MkKn_3xhJixh7yzHN-4VDGsfjVdzZPB083IWwxb8FsX1czv8qo5x5tkFstcxMSDw4PyHZ_uV5JHARcBGbLl615TO8nteNH3fmg8oxcIZb1V8TmchQvtbfs-JdUtKbRbkbCM5AxXVE-ENZFDyG7Z0J9NCy24tZ3e4IsE-nbtv3catcyXChr2_F78PnruU38Ui1G582n4h-pTedhNhkCWFzb0JaVaf_vroh2ep7I0gSdq81OWO7yUzw9Cjeq9Vo4yktgdwdDHzEeBaXHOihkCua36sNFJLlGiLzbpVRVQFzentzsYKfol2x_vjiwN-VWk8I-9Zv_TtcXjepNBDYTXcDKa6AsmRvBWrsDDUbpyipKBZczj6OisGFPtnRnCwvSm6BO6U",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Rahmatulah Sidik\",\n    \"email\" : \"siddiqrahmatullah@gmail.com\",\n    \"phone\" : \"087885664813\",\n    \"address\" : \"Jl.Ciliwung\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/student/update/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWY2NjBhOTE5NjY3YjkxNGM4OGY1OTY0ODEwNTM1MjMzYjVmODI0NzJlYTFlMjMwOTZmNDcxZDFmZmMzZTk1ZWViZmE0MGNiMTY4NDIwNmIiLCJpYXQiOiIxNjEzODQzODIwLjk5MDM4MCIsIm5iZiI6IjE2MTM4NDM4MjAuOTkwNDAxIiwiZXhwIjoiMTY0NTM3OTgyMC45NDI3ODgiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0oXYj_tJ-xg-7YO0Hp84GbGqnJD3bg13Oo6H-smzO9EX5wgGQ2qJ9OGOGAV1pW8HYGuBq1os2ouhhri1upzQM-E4uPCk63q-zh9xgsQO2eHB9V4NIc9UvDRcV4kVnxCQcjbURZ7R4A0qY2M3Axh4zL8uHcSL1_bnh6ElQVUuvTDIwjjNhUNHw-_005etsEOEcU_u_6xqdWNfxvOwBX91rDDEiwtGi8kqhiRqjV_h6CU_Je3IHm0atr29h1wsxslUnVyKaI9cij1VuMiyV5oOyPLAnL5u7egiHqdvxF4MkKn_3xhJixh7yzHN-4VDGsfjVdzZPB083IWwxb8FsX1czv8qo5x5tkFstcxMSDw4PyHZ_uV5JHARcBGbLl615TO8nteNH3fmg8oxcIZb1V8TmchQvtbfs-JdUtKbRbkbCM5AxXVE-ENZFDyG7Z0J9NCy24tZ3e4IsE-nbtv3catcyXChr2_F78PnruU38Ui1G582n4h-pTedhNhkCWFzb0JaVaf_vroh2ep7I0gSdq81OWO7yUzw9Cjeq9Vo4yktgdwdDHzEeBaXHOihkCua36sNFJLlGiLzbpVRVQFzentzsYKfol2x_vjiwN-VWk8I-9Zv_TtcXjepNBDYTXcDKa6AsmRvBWrsDDUbpyipKBZczj6OisGFPtnRnCwvSm6BO6U",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/student/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZWY2ZDU3YzA4MTIyOTY2YzI5N2NmZmMyMmJmNzdmOGFmZWE4OWQ2NjdiOGJhN2U4MjY4MGJlMGUzNTBmOWNiNmY2ZTQ5MmY3YzA1Y2YyNzgiLCJpYXQiOiIxNjEzODg2MzM1LjgzMzI1NyIsIm5iZiI6IjE2MTM4ODYzMzUuODMzMjc3IiwiZXhwIjoiMTY0NTQyMjMzNS43Mjg0MjciLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.i4y9UPZNQezfZB-QjTlqkY_SVvdghOHffToKk7lWTNWlty2aJPEbuHaENFN7lHyDZ3qcbmACKH4KY7RcMQlUsmLWZ1l0A8sM0YnVSyqKTiZWdgxzDEl_Z-W1ff-FpxdlUkh5c98a7yBL3GJkRE8MycBxp_9RDwan_0yolyWeqEm8UIUn7F8BYtDrSbEyFCtXMBQEZR0od2IgMM6lGs482rYfXUZDkbVyHRyv7TNvInGxtvG2rF0-jUAsU_qSFj1m3W-mear9TGcICd8OmsX96GnDOXVdXdzj2EM8r1oLZJ5hIPJ47g4xoYsiLACSQ1nY98dBgV_81OfLaK26iklA0ROTA4Nn8PZ4iLDmwJBB4xTID-esptPCyyD0VwtsImDK3OFeZ7kY-RsqYCon_QVURtD8yIlZ3f43R9sWZlfDCR6ym_A615fDXrRqAcP73T6eReHHioFadaiIGEXzOEi-_fHvmSswl4HjgUpbWulh4f42JPmmzp3wUf67RFRJAc6533iAkgqq5dvtkV1T_xt856GmMRyBQQBpNqp82XkhT58AJJgChtHuoHDEkPiEJcevKnf66TBYoeIlf13fpuTn8HUCnH_ffWVLUZh7CQniuEzapWmx1jJRnggmIkOrWhgrZrNhh_fMdnCOlpTj8j2LsAQquaJMUQVKW-V6Cq9UyIg",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/student/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Hobby",
+			"item": [
+				{
+					"name": "Add Hobby",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGEzMzRhNmEzZTA1NjQzNTAxOGJhYjNlOTUxYWYyOTUyZDQ0YzU5NzYxYTk4ZmZiYzkzMTFhYjMzZTQ1MGEwNjFlYzNmNjIwMjYwODgyNmYiLCJpYXQiOiIxNjE0MTE0MTcwLjM5NDYxNSIsIm5iZiI6IjE2MTQxMTQxNzAuMzk0NjIzIiwiZXhwIjoiMTY0NTY1MDE3MC4yNzk0NzUiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.n5NPDW5OT0i7XrnNyk0p-PwRWWBd-WKRetg_Brn8oX5w0TabSHMTB_uzf6TnEv1wCP3wGaoWLrk3fjUHJwlSA3VEPyUIJ1x1qvp_oHKssX2WS2hlNEX4Kfns9rjz0ffGdEMtAvXrV2Q6NJhbQFtkScTvtdtkpB4mfhzi62PFwiRPVNF125rs-reoZrFTKGdug3EGjZ0uq_cohD5CFRB0dNhvpAqnI7c9SjgJUGM2MmVra0Y0QRk6T8Tl7WhYvTQaMe-hqw-b7480GLJHFHhiJ8w-iZFTfdBc4Rinna3jny8PVUv3bfGsgd0IxwdxMXLcLv699VYxfIZAv_MaTRoUsrvfKDxu-dtULQRWoFv5URE6b86JRp3KWklyf8i3tWC17VM2g0tbbRipCK0lKIIy4bEFXVXSVReOw3-6YOijGDSV_GpQJf7Yx0psHg_riFG-K1phWjTYXA2RM06su4Ps3XU3J-5ETNA8NGJonvIlo1UarJGG5jX2tflH2V6oSyjdvSH7nEdgYDm8TccBUeszUmnLOw4j9yyHT16anWeuwckYx34XE9nPnsTjJtD1H3IB_l0uhXkH0l_85VsqLj1r0kOBBSy_ZJt9kvMgbxRDSn00ekqU5tK2eSdMuTIUUo6ISUPioJIakW6jpghQjP5IeKcSnkRCISRQnzDgK2Qd-xA",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Tik Tok\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hobby/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hobby",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hobby",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTQ5ZDU5NWY2ZTdmNWIwNmJhZGFlMzQyODQ2YmQ3YWVlN2NiNjNmOTQ3ZWM3NGY5YzJkODEwZDJlMzZiYzUxZTAyZTIzMTBjOWU3ODQ3MWUiLCJpYXQiOiIxNjE0MTExNzY1LjgwMDA2MCIsIm5iZiI6IjE2MTQxMTE3NjUuODAwMDY5IiwiZXhwIjoiMTY0NTY0Nzc2NS40Mjk0OTgiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YriUkA6bGq6RpBkRd_VRvx3uzo7l_GE7bAhcufCVGVx9AeiGmlqYgwA59ildhroxtEinU5ximJUs7WxxNMeS4Y31sMruNCL88BBkZn-8tr4G2Q3ULgKb2OTVh2vosCTli43-d0F7sbu-QA70OVZQUlhl1_8SmqF5NoaNCQxVuNVdQ8fe81GQ61qEfnQhPZd362u7Xv0TIdvio9xGqLR9Ra6s_zYP2RZachSCSZFC79botoX_H87zwKYkBv12p3CCQ4jStjQ8JHXie-OnW58yWCBLo76vhzLa8-_aH8Q2P-6WCfmOGUmb9YNTEpnZ5A25bN8GtfLg2mzQsXa9ZBD6fc8nnt9V0EUx_yoUNwbhbn8N3mhAfboM_khevXF3fDtPzvT-H1br0aJme2R6fCNDncIqFushRS3UkUcoHL--mLt0AMu-6vsyYd3C1ne2HNyHWtbH_IWTlfI83osCnG7xJ5ZHFCE0u0Hb5iNlqDVLkWwuTMNolItZk9jB4dcZcFKGIb26I1evRdeoJbHrPi230W2Me_xvaKOlI74gPBD7ucqhLnGtDb1bWkGK9vmxrKnJcy-mJYEAIYYNjcVQpUh0985YtNOUIVHU5L4mkoW0Cvb9nc-toiLemOihoIRqlGg-MVVE4UfLxuscXl82PY5nU62ufBmutOfQVDwSEgV6lKU",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/hobby?keywrod=&size=25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hobby"
+							],
+							"query": [
+								{
+									"key": "keywrod",
+									"value": ""
+								},
+								{
+									"key": "size",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hobby Detail",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTQ5ZDU5NWY2ZTdmNWIwNmJhZGFlMzQyODQ2YmQ3YWVlN2NiNjNmOTQ3ZWM3NGY5YzJkODEwZDJlMzZiYzUxZTAyZTIzMTBjOWU3ODQ3MWUiLCJpYXQiOiIxNjE0MTExNzY1LjgwMDA2MCIsIm5iZiI6IjE2MTQxMTE3NjUuODAwMDY5IiwiZXhwIjoiMTY0NTY0Nzc2NS40Mjk0OTgiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YriUkA6bGq6RpBkRd_VRvx3uzo7l_GE7bAhcufCVGVx9AeiGmlqYgwA59ildhroxtEinU5ximJUs7WxxNMeS4Y31sMruNCL88BBkZn-8tr4G2Q3ULgKb2OTVh2vosCTli43-d0F7sbu-QA70OVZQUlhl1_8SmqF5NoaNCQxVuNVdQ8fe81GQ61qEfnQhPZd362u7Xv0TIdvio9xGqLR9Ra6s_zYP2RZachSCSZFC79botoX_H87zwKYkBv12p3CCQ4jStjQ8JHXie-OnW58yWCBLo76vhzLa8-_aH8Q2P-6WCfmOGUmb9YNTEpnZ5A25bN8GtfLg2mzQsXa9ZBD6fc8nnt9V0EUx_yoUNwbhbn8N3mhAfboM_khevXF3fDtPzvT-H1br0aJme2R6fCNDncIqFushRS3UkUcoHL--mLt0AMu-6vsyYd3C1ne2HNyHWtbH_IWTlfI83osCnG7xJ5ZHFCE0u0Hb5iNlqDVLkWwuTMNolItZk9jB4dcZcFKGIb26I1evRdeoJbHrPi230W2Me_xvaKOlI74gPBD7ucqhLnGtDb1bWkGK9vmxrKnJcy-mJYEAIYYNjcVQpUh0985YtNOUIVHU5L4mkoW0Cvb9nc-toiLemOihoIRqlGg-MVVE4UfLxuscXl82PY5nU62ufBmutOfQVDwSEgV6lKU",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/hobby/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hobby",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Hobby",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTQ5ZDU5NWY2ZTdmNWIwNmJhZGFlMzQyODQ2YmQ3YWVlN2NiNjNmOTQ3ZWM3NGY5YzJkODEwZDJlMzZiYzUxZTAyZTIzMTBjOWU3ODQ3MWUiLCJpYXQiOiIxNjE0MTExNzY1LjgwMDA2MCIsIm5iZiI6IjE2MTQxMTE3NjUuODAwMDY5IiwiZXhwIjoiMTY0NTY0Nzc2NS40Mjk0OTgiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YriUkA6bGq6RpBkRd_VRvx3uzo7l_GE7bAhcufCVGVx9AeiGmlqYgwA59ildhroxtEinU5ximJUs7WxxNMeS4Y31sMruNCL88BBkZn-8tr4G2Q3ULgKb2OTVh2vosCTli43-d0F7sbu-QA70OVZQUlhl1_8SmqF5NoaNCQxVuNVdQ8fe81GQ61qEfnQhPZd362u7Xv0TIdvio9xGqLR9Ra6s_zYP2RZachSCSZFC79botoX_H87zwKYkBv12p3CCQ4jStjQ8JHXie-OnW58yWCBLo76vhzLa8-_aH8Q2P-6WCfmOGUmb9YNTEpnZ5A25bN8GtfLg2mzQsXa9ZBD6fc8nnt9V0EUx_yoUNwbhbn8N3mhAfboM_khevXF3fDtPzvT-H1br0aJme2R6fCNDncIqFushRS3UkUcoHL--mLt0AMu-6vsyYd3C1ne2HNyHWtbH_IWTlfI83osCnG7xJ5ZHFCE0u0Hb5iNlqDVLkWwuTMNolItZk9jB4dcZcFKGIb26I1evRdeoJbHrPi230W2Me_xvaKOlI74gPBD7ucqhLnGtDb1bWkGK9vmxrKnJcy-mJYEAIYYNjcVQpUh0985YtNOUIVHU5L4mkoW0Cvb9nc-toiLemOihoIRqlGg-MVVE4UfLxuscXl82PY5nU62ufBmutOfQVDwSEgV6lKU",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Tidur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/hobby/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hobby",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Student Hobby",
+			"item": [
+				{
+					"name": "Add Student Hobby",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGEzMzRhNmEzZTA1NjQzNTAxOGJhYjNlOTUxYWYyOTUyZDQ0YzU5NzYxYTk4ZmZiYzkzMTFhYjMzZTQ1MGEwNjFlYzNmNjIwMjYwODgyNmYiLCJpYXQiOiIxNjE0MTE0MTcwLjM5NDYxNSIsIm5iZiI6IjE2MTQxMTQxNzAuMzk0NjIzIiwiZXhwIjoiMTY0NTY1MDE3MC4yNzk0NzUiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.n5NPDW5OT0i7XrnNyk0p-PwRWWBd-WKRetg_Brn8oX5w0TabSHMTB_uzf6TnEv1wCP3wGaoWLrk3fjUHJwlSA3VEPyUIJ1x1qvp_oHKssX2WS2hlNEX4Kfns9rjz0ffGdEMtAvXrV2Q6NJhbQFtkScTvtdtkpB4mfhzi62PFwiRPVNF125rs-reoZrFTKGdug3EGjZ0uq_cohD5CFRB0dNhvpAqnI7c9SjgJUGM2MmVra0Y0QRk6T8Tl7WhYvTQaMe-hqw-b7480GLJHFHhiJ8w-iZFTfdBc4Rinna3jny8PVUv3bfGsgd0IxwdxMXLcLv699VYxfIZAv_MaTRoUsrvfKDxu-dtULQRWoFv5URE6b86JRp3KWklyf8i3tWC17VM2g0tbbRipCK0lKIIy4bEFXVXSVReOw3-6YOijGDSV_GpQJf7Yx0psHg_riFG-K1phWjTYXA2RM06su4Ps3XU3J-5ETNA8NGJonvIlo1UarJGG5jX2tflH2V6oSyjdvSH7nEdgYDm8TccBUeszUmnLOw4j9yyHT16anWeuwckYx34XE9nPnsTjJtD1H3IB_l0uhXkH0l_85VsqLj1r0kOBBSy_ZJt9kvMgbxRDSn00ekqU5tK2eSdMuTIUUo6ISUPioJIakW6jpghQjP5IeKcSnkRCISRQnzDgK2Qd-xA",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\" : 1,\n    \"hoby_id\" : [\n        1\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/student-hobby/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student-hobby",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Data Student Hobby",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGEzMzRhNmEzZTA1NjQzNTAxOGJhYjNlOTUxYWYyOTUyZDQ0YzU5NzYxYTk4ZmZiYzkzMTFhYjMzZTQ1MGEwNjFlYzNmNjIwMjYwODgyNmYiLCJpYXQiOiIxNjE0MTE0MTcwLjM5NDYxNSIsIm5iZiI6IjE2MTQxMTQxNzAuMzk0NjIzIiwiZXhwIjoiMTY0NTY1MDE3MC4yNzk0NzUiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.n5NPDW5OT0i7XrnNyk0p-PwRWWBd-WKRetg_Brn8oX5w0TabSHMTB_uzf6TnEv1wCP3wGaoWLrk3fjUHJwlSA3VEPyUIJ1x1qvp_oHKssX2WS2hlNEX4Kfns9rjz0ffGdEMtAvXrV2Q6NJhbQFtkScTvtdtkpB4mfhzi62PFwiRPVNF125rs-reoZrFTKGdug3EGjZ0uq_cohD5CFRB0dNhvpAqnI7c9SjgJUGM2MmVra0Y0QRk6T8Tl7WhYvTQaMe-hqw-b7480GLJHFHhiJ8w-iZFTfdBc4Rinna3jny8PVUv3bfGsgd0IxwdxMXLcLv699VYxfIZAv_MaTRoUsrvfKDxu-dtULQRWoFv5URE6b86JRp3KWklyf8i3tWC17VM2g0tbbRipCK0lKIIy4bEFXVXSVReOw3-6YOijGDSV_GpQJf7Yx0psHg_riFG-K1phWjTYXA2RM06su4Ps3XU3J-5ETNA8NGJonvIlo1UarJGG5jX2tflH2V6oSyjdvSH7nEdgYDm8TccBUeszUmnLOw4j9yyHT16anWeuwckYx34XE9nPnsTjJtD1H3IB_l0uhXkH0l_85VsqLj1r0kOBBSy_ZJt9kvMgbxRDSn00ekqU5tK2eSdMuTIUUo6ISUPioJIakW6jpghQjP5IeKcSnkRCISRQnzDgK2Qd-xA",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/student-hobby",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student-hobby"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

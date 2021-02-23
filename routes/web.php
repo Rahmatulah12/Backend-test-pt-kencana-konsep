@@ -53,7 +53,10 @@ $router->group(["prefix" => 'api'], function() use($router){
         // Hobby Route
         $router->group(['prefix' => 'hobby'], function() use($router){
             $router->get('/', ['as' => 'hobbies', 'uses' => 'HobbyController@index']);
+            $router->get('/{id}', ['as' => 'hobby', 'uses' => 'HobbyController@show']);
             $router->post('/add', ['as' => 'add_hobby', 'uses' => 'HobbyController@store']);
+            $router->patch('/update/{id}', ['as' => 'update_hobby', 'uses' => 'HobbyController@update']);
+            $router->delete('/delete/{id}', ['as' => 'delete_hobby', 'uses' => 'HobbyController@delete']);
         });
 
         // Student Hobby Route

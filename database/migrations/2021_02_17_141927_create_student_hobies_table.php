@@ -15,8 +15,10 @@ class CreateStudentHobiesTable extends Migration
     {
         Schema::create('student_hobies', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('student_id')->autoIncrement(false)->nullable($value = false);
-            $table->integer('hoby_id')->autoIncrement(false)->nullable($value = false);
+            $table->unsignedBigInteger('student_id');
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('hoby_id');
+            $table->foreign('hoby_id')->references('id')->on('hobies')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
