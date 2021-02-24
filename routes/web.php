@@ -36,6 +36,8 @@ $router->group(["prefix" => 'api'], function() use($router){
             // Index, get all data
             $router->get('/', ['as' => 'student', 'uses' => 'StudentController@index']);
 
+            $router->get('/options', ['as' => 'options', 'uses' => 'StudentController@option']);
+
             // Route for view detail
             $router->get("/{id}", ["as" => "student_detail", "uses" => "StudentController@view"]);
 
@@ -53,6 +55,7 @@ $router->group(["prefix" => 'api'], function() use($router){
         // Hobby Route
         $router->group(['prefix' => 'hobby'], function() use($router){
             $router->get('/', ['as' => 'hobbies', 'uses' => 'HobbyController@index']);
+            $router->get('/options', ['as' => 'options', 'uses' => 'HobbyController@option']);
             $router->get('/{id}', ['as' => 'hobby', 'uses' => 'HobbyController@show']);
             $router->post('/add', ['as' => 'add_hobby', 'uses' => 'HobbyController@store']);
             $router->patch('/update/{id}', ['as' => 'update_hobby', 'uses' => 'HobbyController@update']);
@@ -62,7 +65,10 @@ $router->group(["prefix" => 'api'], function() use($router){
         // Student Hobby Route
         $router->group(['prefix' => 'student-hobby'], function() use($router){
             $router->get("/", ['as' => 'get_student_hobby', 'uses' => 'StudentHobbyController@index']);
+            $router->get("/{id}", ["as" => 'detail_student_hobby', "uses" => "StudentHobbyController@show"]);
             $router->post('/add', ['as' => 'add_student_hobby', 'uses' => 'StudentHobbyController@store']);
+            $router->patch('/update/{id}', ['as' => 'update_student_hobby', 'uses' => 'StudentHobbyController@update']);
+            $router->delete("/delete/{id}", ['as' => 'delete_student_hobby', 'uses' => 'StudentHobbyController@delete']);
         });
 
     });

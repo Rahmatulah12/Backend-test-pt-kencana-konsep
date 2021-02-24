@@ -320,7 +320,7 @@
 							"oauth2": [
 								{
 									"key": "accessToken",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGEzMzRhNmEzZTA1NjQzNTAxOGJhYjNlOTUxYWYyOTUyZDQ0YzU5NzYxYTk4ZmZiYzkzMTFhYjMzZTQ1MGEwNjFlYzNmNjIwMjYwODgyNmYiLCJpYXQiOiIxNjE0MTE0MTcwLjM5NDYxNSIsIm5iZiI6IjE2MTQxMTQxNzAuMzk0NjIzIiwiZXhwIjoiMTY0NTY1MDE3MC4yNzk0NzUiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.n5NPDW5OT0i7XrnNyk0p-PwRWWBd-WKRetg_Brn8oX5w0TabSHMTB_uzf6TnEv1wCP3wGaoWLrk3fjUHJwlSA3VEPyUIJ1x1qvp_oHKssX2WS2hlNEX4Kfns9rjz0ffGdEMtAvXrV2Q6NJhbQFtkScTvtdtkpB4mfhzi62PFwiRPVNF125rs-reoZrFTKGdug3EGjZ0uq_cohD5CFRB0dNhvpAqnI7c9SjgJUGM2MmVra0Y0QRk6T8Tl7WhYvTQaMe-hqw-b7480GLJHFHhiJ8w-iZFTfdBc4Rinna3jny8PVUv3bfGsgd0IxwdxMXLcLv699VYxfIZAv_MaTRoUsrvfKDxu-dtULQRWoFv5URE6b86JRp3KWklyf8i3tWC17VM2g0tbbRipCK0lKIIy4bEFXVXSVReOw3-6YOijGDSV_GpQJf7Yx0psHg_riFG-K1phWjTYXA2RM06su4Ps3XU3J-5ETNA8NGJonvIlo1UarJGG5jX2tflH2V6oSyjdvSH7nEdgYDm8TccBUeszUmnLOw4j9yyHT16anWeuwckYx34XE9nPnsTjJtD1H3IB_l0uhXkH0l_85VsqLj1r0kOBBSy_ZJt9kvMgbxRDSn00ekqU5tK2eSdMuTIUUo6ISUPioJIakW6jpghQjP5IeKcSnkRCISRQnzDgK2Qd-xA",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjc4MGZlYWQxZTBiZDNiZDk5M2I5OTlkZTA3NGQ2MzM2YTU0NmM1OTFkZTExOTJkYjEyZjg2NmQ4MzYxYmI5ZmY3MzQ0ZmQ4MjNjMGM0ZjUiLCJpYXQiOiIxNjE0MTQ0NjU1LjA4NTAxOSIsIm5iZiI6IjE2MTQxNDQ2NTUuMDg1MDI5IiwiZXhwIjoiMTY0NTY4MDY1NC45NzIwNjgiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.CPuqfxgaTavDJVlmDgMV7dcQCgyGSqJLxxEKOllgXxpJOfMy1Lg5x07VDMBUvjM3n-WVqZHNf-pL-hoYarggpFYqlVCebuQJBt_ewhH1PfidcgUaWb_cgGSaWrusQ96cLCoBImdhYkDnESEajEp03Sm5aAdcAOwOF9ErJbxqaUbtpm681clwtTZlOflC2Jr-rSADTQIX8czUk74TQ0o5R6dP4hoTe2-CU550YVzKczJVuvLljVg52R_11rjZLZfdIKRL1A8mNrLRuSKTXak8JllQU3Ip6nFXrKBpPHgOgUmNoD80mJRc5xSYFeT-9zRtSJBJ0DfZHF8KxuYWkNF8lWZjNGp_rTAKAN2s8t_F0wpki0KBoA5H_TpphEh3HSI8pHoBZfAAKW1LDWoLitAusk3BBi1sFZxk3DeIqHEewra8mX8hm4Hxb4XG7rkNQAyMs9-heCAxYxXnwf32XfhpZrY7weson6Jn2bp7KygFMP8vBzzWptnCr0uZn5EllX_WlnIf1qq-_h9E3GPghQfaxQ3ETpjxIky72egaPPiyHLD_GN3bITQmkNQJqSjADxS45DvBxJo9EKHgotMJOtgPIuTZqbFaLqJGx3KMcciT4fDrT32CcVQcoE6d6FiSAlGss8FJV0iO87ICgv2lr9JZW6hoH3Y_GtXBDriu5ihY8-s",
 									"type": "string"
 								},
 								{
@@ -334,7 +334,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\" : \"Tik Tok\"\n}",
+							"raw": "{\n    \"name\" : \"<span style='color:red;'>Minum Alkohol</span>\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -565,6 +565,88 @@
 							"path": [
 								"api",
 								"student-hobby"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get View ",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjc4MGZlYWQxZTBiZDNiZDk5M2I5OTlkZTA3NGQ2MzM2YTU0NmM1OTFkZTExOTJkYjEyZjg2NmQ4MzYxYmI5ZmY3MzQ0ZmQ4MjNjMGM0ZjUiLCJpYXQiOiIxNjE0MTQ0NjU1LjA4NTAxOSIsIm5iZiI6IjE2MTQxNDQ2NTUuMDg1MDI5IiwiZXhwIjoiMTY0NTY4MDY1NC45NzIwNjgiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.CPuqfxgaTavDJVlmDgMV7dcQCgyGSqJLxxEKOllgXxpJOfMy1Lg5x07VDMBUvjM3n-WVqZHNf-pL-hoYarggpFYqlVCebuQJBt_ewhH1PfidcgUaWb_cgGSaWrusQ96cLCoBImdhYkDnESEajEp03Sm5aAdcAOwOF9ErJbxqaUbtpm681clwtTZlOflC2Jr-rSADTQIX8czUk74TQ0o5R6dP4hoTe2-CU550YVzKczJVuvLljVg52R_11rjZLZfdIKRL1A8mNrLRuSKTXak8JllQU3Ip6nFXrKBpPHgOgUmNoD80mJRc5xSYFeT-9zRtSJBJ0DfZHF8KxuYWkNF8lWZjNGp_rTAKAN2s8t_F0wpki0KBoA5H_TpphEh3HSI8pHoBZfAAKW1LDWoLitAusk3BBi1sFZxk3DeIqHEewra8mX8hm4Hxb4XG7rkNQAyMs9-heCAxYxXnwf32XfhpZrY7weson6Jn2bp7KygFMP8vBzzWptnCr0uZn5EllX_WlnIf1qq-_h9E3GPghQfaxQ3ETpjxIky72egaPPiyHLD_GN3bITQmkNQJqSjADxS45DvBxJo9EKHgotMJOtgPIuTZqbFaLqJGx3KMcciT4fDrT32CcVQcoE6d6FiSAlGss8FJV0iO87ICgv2lr9JZW6hoH3Y_GtXBDriu5ihY8-s",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/student-hobby/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student-hobby",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjc4MGZlYWQxZTBiZDNiZDk5M2I5OTlkZTA3NGQ2MzM2YTU0NmM1OTFkZTExOTJkYjEyZjg2NmQ4MzYxYmI5ZmY3MzQ0ZmQ4MjNjMGM0ZjUiLCJpYXQiOiIxNjE0MTQ0NjU1LjA4NTAxOSIsIm5iZiI6IjE2MTQxNDQ2NTUuMDg1MDI5IiwiZXhwIjoiMTY0NTY4MDY1NC45NzIwNjgiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.CPuqfxgaTavDJVlmDgMV7dcQCgyGSqJLxxEKOllgXxpJOfMy1Lg5x07VDMBUvjM3n-WVqZHNf-pL-hoYarggpFYqlVCebuQJBt_ewhH1PfidcgUaWb_cgGSaWrusQ96cLCoBImdhYkDnESEajEp03Sm5aAdcAOwOF9ErJbxqaUbtpm681clwtTZlOflC2Jr-rSADTQIX8czUk74TQ0o5R6dP4hoTe2-CU550YVzKczJVuvLljVg52R_11rjZLZfdIKRL1A8mNrLRuSKTXak8JllQU3Ip6nFXrKBpPHgOgUmNoD80mJRc5xSYFeT-9zRtSJBJ0DfZHF8KxuYWkNF8lWZjNGp_rTAKAN2s8t_F0wpki0KBoA5H_TpphEh3HSI8pHoBZfAAKW1LDWoLitAusk3BBi1sFZxk3DeIqHEewra8mX8hm4Hxb4XG7rkNQAyMs9-heCAxYxXnwf32XfhpZrY7weson6Jn2bp7KygFMP8vBzzWptnCr0uZn5EllX_WlnIf1qq-_h9E3GPghQfaxQ3ETpjxIky72egaPPiyHLD_GN3bITQmkNQJqSjADxS45DvBxJo9EKHgotMJOtgPIuTZqbFaLqJGx3KMcciT4fDrT32CcVQcoE6d6FiSAlGss8FJV0iO87ICgv2lr9JZW6hoH3Y_GtXBDriu5ihY8-s",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student_id\" : 1,\n    \"hobby_id\" : \"3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/student-hobby/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"student-hobby",
+								"update",
+								"2"
 							]
 						}
 					},

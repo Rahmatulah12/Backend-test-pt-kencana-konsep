@@ -163,4 +163,19 @@ class StudentController extends BaseController
           ],200);
     }
 
+    public function option()
+    {
+          $students = $this->student->select("id", "name")->get();
+          if(!$students){
+            return response()->json([
+                  "error" => true,
+                  "message" => "Data not found."
+            ], 500);
+          }
+          return response()->json([
+            "error" => false,
+            "data" => $students,
+      ],200);
+    }
+
 }

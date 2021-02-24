@@ -13,12 +13,12 @@ class StudentHobby extends Model
             'student_id', 'hoby_id',
       ];
 
-      public function getAllData(){
-            $students = DB::select("SELECT students.id AS student_id, students.name AS student_name,
-            GROUP_CONCAT(hobies.name, '') AS hobby FROM student_hobies
-            INNER JOIN students ON student_hobies.student_id = students.id
-            INNER JOIN hobies ON student_hobies.hoby_id = hobies.id
-            GROUP BY students.id");
+      public function getAllData($keyword = null, $limit = 25){
+            $students = DB::table("student_hobies")->join("students", "student_hobies.student_id", "=", "students.id")
+            ->join("hobies", "student_hobies.hoby_id", '=', "hobies.id")
+            ->select("student_hobies.id", "students.id as student_id", "students.name as student_name", "hobies.name as hobby")
+            ->where("student_hobies.id", "LIKE", "%$keyword%")->orWhere("students.id", "LIKE", "%$keyword%")
+            ->orWhere("students.name", "LIKE", "%$keyword%")->orWhere("hobies.name", "LIKE", "%$keyword%")->paginate($limit);
             return $students;
       }
 }

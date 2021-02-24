@@ -135,4 +135,21 @@ class HobbyController extends BaseController
             'message' => "Hobby has been deleted.",
       ], 200);
     }
+
+    public function option()
+    {
+          $hobbies = $this->hobby->select("id", "name")->get();
+          if(!$hobbies)
+            {
+                  return response()->json([
+                        'error' => true,
+                        'message' => "Something went wrong.",
+                  ], 500);
+            }
+
+            return response()->json([
+                  'error' => false,
+                  'message' => $hobbies,
+            ], 200);
+    }
 }
